@@ -7,10 +7,8 @@
 <body>
     <a href = "/add">Add New Job</a><br/>
     <div th:each = "job : ${jobs}">
-        <dl th:text="[[${job.title}]]([[${job.employer}]])">
-            <dd th:text="[[${job.description}]]"></dd>
-        </dl>
-
+        <h4 th:inline="text">[[${job.title}]] @  [[${job.employer}]]</h4>
+        <p th:text>[[${job.description}]]</p>
     </div>
 </body>
 </html>
